@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+
+<mapper namespace="com.music.dao.SingerDao">
+
+	<select id="findSingerList" resultType="Singer">
+		select * from singer order by id desc
+	</select>
+	
+	<delete id="deleteSinger" parameterType="Integer[]">
+		delete from singer where id in (
+			<foreach collection="array" item="id" separator=",">
+				${id}
+			</foreach>
+		);
+	</delete>
+	
+	<insert id="addSinger" parameterType="Singer">
+		insert into singer(name,birth,star,s_img) values(#{name},#{birth},#{star},#{s_img})
+	</insert>
+	
+</mapper>
