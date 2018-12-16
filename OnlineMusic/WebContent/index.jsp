@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>在线音乐首页</title>
+<title>在线音乐首页LALA</title>
 
 <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
 <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
